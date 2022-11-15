@@ -72,9 +72,9 @@ public class MyBatisTest {
 //        brand.setStatus(status);
 
         Map map = new HashMap();
-        map.put("status",status);
-        map.put("companyName",companyName);
-        map.put("brandName",brandName);
+        map.put("status", status);
+        map.put("companyName", companyName);
+        map.put("brandName", brandName);
 
         String resource = "mybatis-config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resource);
@@ -91,5 +91,31 @@ public class MyBatisTest {
         sqlSession.close();
     }
 
+    @Test
+    public void testSelectByConditionSingle() throws IOException {
+        int status = 1;
+        String companyName = "华为";
+        String brandName = "华为";
+
+
+        companyName = "%" + companyName + "%";
+        brandName = "%" + brandName + "%";
+
+
+        Brand brand = new Brand();
+        brand.setCompanyName(companyName);
+
+
+        String resource = "mybatis-config.xml";
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        BrandMapper brandMapper = sqlSession.getMapper(BrandMapper.class);
+        List<Brand> brands = brandMapper.selectByConditionSingle(brand);
+        System.out.println(brands);
+        sqlSession.close();
+    }
 
 }

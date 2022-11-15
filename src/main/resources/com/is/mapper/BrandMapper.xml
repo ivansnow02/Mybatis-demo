@@ -34,4 +34,24 @@
             </if>
         </where>
     </select>
+
+
+
+    <select id="selectByConditionSingle" resultMap="brandResultMap">
+        select *
+        from tb_brand
+        <where>
+            <choose><!--相当于switch-->
+                <when test="status != null"><!--相当于case-->
+                    status = #{status}
+                </when>
+                <when test="companyName != null and companyName != ''"><!--相当于case-->
+                    company_name like #{companyName}
+                </when>
+                <when test="brandName != null and brandName != ''"><!--相当于case-->
+                    brand_name like #{brandName}
+                </when>
+            </choose>
+        </where>
+    </select>
 </mapper>
