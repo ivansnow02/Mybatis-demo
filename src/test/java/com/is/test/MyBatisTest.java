@@ -243,4 +243,25 @@ public class MyBatisTest {
         sqlSession.close();
 
     }
+
+    @Test
+    public void testSelectUserById() throws IOException {
+
+        int id = 1;
+
+        String resource = "mybatis-config.xml";
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+        User user = userMapper.selectById(id);
+
+        System.out.println(user);
+
+        sqlSession.close();
+
+    }
 }

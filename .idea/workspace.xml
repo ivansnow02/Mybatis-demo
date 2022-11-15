@@ -70,23 +70,7 @@
       <recent name="com.is" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyBatisTest.testSelectUser">
-    <configuration name="MyBatisTest.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Mybatis-demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.is.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.is.test" />
-      <option name="MAIN_CLASS_NAME" value="com.is.test.MyBatisTest" />
-      <option name="METHOD_NAME" value="testAdd" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MyBatisTest.testSelectUserById">
     <configuration name="MyBatisTest.testDeleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mybatis-demo" />
       <extension name="coverage">
@@ -135,6 +119,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyBatisTest.testSelectUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mybatis-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.is.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.is.test" />
+      <option name="MAIN_CLASS_NAME" value="com.is.test.MyBatisTest" />
+      <option name="METHOD_NAME" value="testSelectUserById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyBatisTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mybatis-demo" />
       <extension name="coverage">
@@ -153,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyBatisTest.testSelectUserById" />
         <item itemvalue="JUnit.MyBatisTest.testSelectUser" />
         <item itemvalue="JUnit.MyBatisTest.testDeleteByIds" />
         <item itemvalue="JUnit.MyBatisTest.testDeleteById" />
         <item itemvalue="JUnit.MyBatisTest.testUpdate" />
-        <item itemvalue="JUnit.MyBatisTest.testAdd" />
       </list>
     </recent_temporary>
   </component>
