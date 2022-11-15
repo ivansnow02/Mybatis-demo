@@ -1,7 +1,9 @@
 package com.is.test;
 
 import com.is.mapper.BrandMapper;
+import com.is.mapper.UserMapper;
 import com.is.pojo.Brand;
+import com.is.pojo.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -202,7 +204,7 @@ public class MyBatisTest {
     @Test
     public void testDeleteByIds() throws IOException {
 
-        int ids[] = {4,5};
+        int ids[] = {4, 5};
 
         String resource = "mybatis-config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resource);
@@ -219,4 +221,26 @@ public class MyBatisTest {
         sqlSession.close();
     }
 
+
+    @Test
+    public void testSelectUser() throws IOException {
+
+        String username = "zhangsan";
+        String password = "123";
+
+        String resource = "mybatis-config.xml";
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+        User user = userMapper.selectOne(username, password);
+
+        System.out.println(user);
+
+        sqlSession.close();
+
+    }
 }

@@ -7,4 +7,11 @@
         select *
         from tb_user;
     </select>
+    <select id="selectOne" resultType="com.is.pojo.User">
+        select *
+        from tb_user
+        where
+            username = #{username}
+        and password = #{password};
+    </select>
 </mapper>
