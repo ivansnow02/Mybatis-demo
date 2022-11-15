@@ -36,4 +36,15 @@ public interface BrandMapper {
      * 修改
      */
     Integer update(Brand brand);
+
+    /**
+     * 单个删除
+     */
+    void deleteById(int id);
+
+    /**
+     * 批量删除
+     */
+    void deleteByIds(int[] ids);
+
 }
