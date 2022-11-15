@@ -118,4 +118,64 @@ public class MyBatisTest {
         sqlSession.close();
     }
 
+    @Test
+    public void testAdd() throws IOException {
+
+        int status = 1;
+        String companyName = "波导手机";
+        String brandName = "波导";
+        String description = "手机中的战斗机";
+        int ordered = 100;
+
+        Brand brand = new Brand();
+        brand.setStatus(status);
+        brand.setCompanyName(companyName);
+        brand.setBrandName(brandName);
+        brand.setDescription(description);
+        brand.setOrdered(ordered);
+
+        String resource = "mybatis-config.xml";
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        BrandMapper brandMapper = sqlSession.getMapper(BrandMapper.class);
+
+        brandMapper.add(brand);
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Test
+    public void testUpdate() throws IOException {
+//接收参数
+        int status = 0;
+        String companyName = "波导手机";
+        String brandName = "波导";
+        String description = "波导手机,手机中的战斗机";
+        int ordered = 200;
+        int id = 6;
+
+        Brand brand = new Brand();
+        brand.setStatus(status);
+
+        brand.setId(id);
+
+        String resource = "mybatis-config.xml";
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        BrandMapper brandMapper = sqlSession.getMapper(BrandMapper.class);
+
+        int count = brandMapper.update(brand);
+        System.out.println(count);
+
+        sqlSession.commit();
+
+        sqlSession.close();
+    }
+
 }

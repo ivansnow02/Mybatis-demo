@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1d85b5e-cde0-4598-8fa6-805cd0653535" name="变更" comment="update 11.15 多条件查询">
+    <list default="true" id="c1d85b5e-cde0-4598-8fa6-805cd0653535" name="变更" comment="update 11.15 单条件查询">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/is/mapper/BrandMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/is/mapper/BrandMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/is/mapper/BrandMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/is/mapper/BrandMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/is/test/MyBatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/is/test/MyBatisTest.java" afterDir="false" />
@@ -70,8 +71,8 @@
       <recent name="com.is" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyBatisTest.testSelectByConditionSingle">
-    <configuration name="MyBatisTest.testSelectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MyBatisTest.testUpdate">
+    <configuration name="MyBatisTest.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mybatis-demo" />
       <extension name="coverage">
         <pattern>
@@ -81,7 +82,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.is.test" />
       <option name="MAIN_CLASS_NAME" value="com.is.test.MyBatisTest" />
-      <option name="METHOD_NAME" value="testSelectAll" />
+      <option name="METHOD_NAME" value="testAdd" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,12 +136,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyBatisTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mybatis-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.is.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.is.test" />
+      <option name="MAIN_CLASS_NAME" value="com.is.test.MyBatisTest" />
+      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyBatisTest.testUpdate" />
+        <item itemvalue="JUnit.MyBatisTest.testAdd" />
         <item itemvalue="JUnit.MyBatisTest.testSelectByConditionSingle" />
         <item itemvalue="JUnit.MyBatisTest.testSelectByCondition" />
         <item itemvalue="JUnit.MyBatisTest.testSelectById" />
-        <item itemvalue="JUnit.MyBatisTest.testSelectAll" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668504420591</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update 11.15 单条件查询">
+      <created>1668504732085</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668504732085</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +246,7 @@
     <MESSAGE value="update 11.15 查询所有属性" />
     <MESSAGE value="update 11.15 多条件查询（beta）" />
     <MESSAGE value="update 11.15 多条件查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 11.15 多条件查询" />
+    <MESSAGE value="update 11.15 单条件查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 11.15 单条件查询" />
   </component>
 </project>

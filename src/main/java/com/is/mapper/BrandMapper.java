@@ -27,6 +27,13 @@ public interface BrandMapper {
      */
     List<Brand> selectByConditionSingle(Brand brand);
 
+    /**
+     * 添加
+     */
+    void add(Brand brand);
 
-
+    /**
+     * 修改
+     */
+    Integer update(Brand brand);
 }
