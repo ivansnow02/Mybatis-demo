@@ -10,7 +10,9 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MyBatisTest {
 
@@ -52,5 +54,42 @@ public class MyBatisTest {
         System.out.println(brand);
         sqlSession.close();
     }
+
+    @Test
+    public void testSelectByCondition() throws IOException {
+
+        int status = 1;
+        String companyName = "华为";
+        String brandName = "华为";
+
+        companyName = "%" + companyName + "%";
+        brandName = "%" + brandName + "%";
+
+//        Brand brand = new Brand();
+//
+//        brand.setBrandName(brandName);
+//        brand.setCompanyName(companyName);
+//        brand.setStatus(status);
+
+        Map map = new HashMap();
+        map.put("status",status);
+        map.put("companyName",companyName);
+        map.put("brandName",brandName);
+
+        String resource = "mybatis-config.xml";
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        BrandMapper brandMapper = sqlSession.getMapper(BrandMapper.class);
+
+
+        List<Brand> brands = brandMapper.selectByCondition(map);
+        System.out.println(brands);
+        sqlSession.close();
+    }
+
 
 }
